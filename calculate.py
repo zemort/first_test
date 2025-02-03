@@ -24,9 +24,8 @@ while message_exit != exit_program:
         while second_number == 0:
             print("Ошибка! Введите верное число!")
             second_number = float(input())
-        else:
-            division_finish = first_number / second_number
-            print('Ответ:', division_finish)
+        division_finish = first_number / second_number
+        print('Ответ:', division_finish)
     if selected_operation == 4:
         multiplication_finish = first_number * second_number
         print('Ответ:', multiplication_finish)
