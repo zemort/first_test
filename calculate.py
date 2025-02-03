@@ -27,17 +27,6 @@ while message_exit != exit_program:
         else:
             division_finish = first_number / second_number
             print('Ответ:', division_finish)
-        # active = True
-        # while active:
-        #     if second_number != 0:
-        #         division_finish = first_number / second_number
-        #         print('Ответ:', division_finish)
-        #         break
-        #     else:
-        #         print('Ошибка! Введите верное число!')
-        #         second_number = float(input())
-        #         if second_number != 0:
-        #             active = False
     if selected_operation == 4:
         multiplication_finish = first_number * second_number
         print('Ответ:', multiplication_finish)
