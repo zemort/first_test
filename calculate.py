@@ -2,25 +2,37 @@ addition = '1. Сложение'
 subtraction = '2. Вычитание'
 division = '3. Деление'
 multiplication = '4. Умножение'
-print("Пожалуйста, выберите операцию:",addition, subtraction, division, multiplication, sep='\n')
-selected_operation = int(input())
-print('Введите первое число: ')
-first_number = float(input())
-print('Введите второе число: ')
-second_number = float(input())
-if selected_operation == 1:
-    addition_finish = first_number + second_number
-    print('Ответ:', round(addition_finish))
-if selected_operation == 2:
-    subtraction_finish = first_number - second_number
-    print('Ответ:', round(subtraction_finish))
-if selected_operation == 3:
-    if second_number != 0:
-        division_finish = first_number // second_number
-        print('Ответ:', round(division_finish))
+exit_program = '0. Выход из программы'
+message_exit = ''
+while message_exit != exit_program:
+    print("Пожалуйста, выберите операцию:",addition, subtraction, division, multiplication,exit_program, sep='\n')
+    selected_operation = int(input())
+    if selected_operation == 0:
+        break
     else:
-        print('Ошибка, на ноль делить нельзя!')
-if selected_operation == 4:
-    multiplication_finish = first_number * second_number
-    print('Ответ:', round(multiplication_finish))
-print('Завершение программы!')
+        print('Введите первое число: ')
+        first_number = float(input())
+        print('Введите второе число: ')
+        second_number = float(input())
+    if selected_operation == 1:
+        addition_finish = first_number + second_number
+        print('Ответ:', addition_finish)
+    if selected_operation == 2:
+        subtraction_finish = first_number - second_number
+        print('Ответ:', subtraction_finish)
+    if selected_operation == 3:
+        active = True
+        while active:
+            if second_number != 0:
+                division_finish = first_number / second_number
+                print('Ответ:', division_finish)
+                break
+            else:
+                print('Ошибка! Введите верное число!')
+                second_number = float(input())
+                if second_number != 0:
+                    active = False
+    if selected_operation == 4:
+        multiplication_finish = first_number * second_number
+        print('Ответ:', multiplication_finish)
+print('Завершение программы! Будем рады видеть Вас снова!')
