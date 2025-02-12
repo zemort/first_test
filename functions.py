@@ -16,4 +16,4 @@ def divide(num1, num2):
 def multiply(num1,num2):
     """"Умножение двух переменных"""
     result = num1 * num2
-    return result
+    return result("operation_history")
